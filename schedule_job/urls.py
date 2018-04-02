@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from api import views as api_view
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^test/$', api_view.TestAPI.as_view()),
+    url(r'^admin/$', admin.site.urls),
+
 ]
